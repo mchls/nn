@@ -1,1 +1,5 @@
-bla bla
+package ui;
+
+public class Test {
+    int testovaci;
+}
