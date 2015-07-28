@@ -10,7 +10,8 @@ package ui;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world edited from the web!");
+        E01_LinearRegression e01=new E01_LinearRegression();
+        e01.run();
     }
     
 }
