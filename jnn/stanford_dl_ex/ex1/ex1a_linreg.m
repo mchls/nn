@@ -44,6 +44,7 @@ theta = rand(n,1);
 %
 tic;
 options = struct('MaxIter', 200);
+printf "Volam optimalizaci\n";
 theta = minFunc(@linear_regression, theta, options, train.X, train.y);
 fprintf('Optimization took %f seconds.\n', toc);
 
@@ -79,6 +80,7 @@ fprintf('RMS testing error: %f\n', test_rms);
 % Plot predictions on test data.
 plot_prices=true;
 if (plot_prices)
+  printf ("Tisknu vysledky\n");
   [actual_prices,I] = sort(actual_prices);
   predicted_prices=predicted_prices(I);
   plot(actual_prices, 'rx');

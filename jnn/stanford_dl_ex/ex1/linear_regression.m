@@ -15,10 +15,28 @@ function [f,g] = linear_regression(theta, X,y)
 
   %
   % TODO:  Compute the linear regression objective by looping over the examples in X.
-  %        Store the objective function value in 'f'.
+  %        Store the objective function value in 'f'.                                    objective je to same jako cost function
   %
   % TODO:  Compute the gradient of the objective with respect to theta by looping over
   %        the examples in X and adding up the gradient for each example.  Store the
   %        computed gradient in 'g'.
   
 %%% YOUR CODE HERE %%%
+%fprintf ("Vstupni parametr theta je sloupecek vah o velikosti %d: \n",size(theta,1));
+%theta
+%printf ("Vstupni parametr X je matice majici n=%d sloupecku=parametru a m=%d radku=zaznamu: \n",size(X,1),size(X,2));
+%X
+%printf ("Vstupni parametr y je radek o velikosti %d: \n",size(y,2));
+%y
+for rec = 1:m
+    inputX = X(:,rec);
+    outputCorrectY = y(rec);
+    outputH = sum(theta .* inputX);
+    err = 0.5 * ((outputH-outputCorrectY)^2);
+    f += err;
+    diff = inputX * (outputH-outputCorrectY);
+    g += diff;
+end     
+
+          
+          
