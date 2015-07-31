@@ -20,4 +20,6 @@ w(w == real(w))
 
 vsechny indexy do poli jsou od 1!
 
+X' znamena otoceni vektoru
+x .* x znamena nenasobit vektorove, ale element po elementu
 

@@ -10,6 +10,9 @@ mkoctfile --mex lbfgsAddC.c
 cp *.mex ../compiled
 rm *.mex *.o
 
+Dalsi data je treba stahnout z http://ai.stanford.edu/~amaas/data/data.zip, patri do adresare common
+Jedna se o MNIST databazi z http://yann.lecun.com/exdb/mnist/ - tam je i popis formatu
+
 Do Netbeans existuje nasledujici plugin. Je ulozen i v projektu pod adresarem doc.
 http://plugins.netbeans.org/plugin/18433/octavenb
 Nastaveni je pres Tools/Options - cesta k binaru - /usr/bin/octave
