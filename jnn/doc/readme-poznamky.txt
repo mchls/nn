@@ -1,12 +1,6 @@
 
-Pro octave je treba prelozit c programy:
-cd  ~/pgms/michals/nn/jnn/stanford_dl_ex/common/minFunc_2012/minFunc/mex
-mkoctfile --mex  lbfgsProdC.c
-mkoctfile --mex  mcholC.c
-mkoctfile --mex lbfgsC.c
-mkoctfile --mex lbfgsAddC.c
-cp *.mex ../compiled
-rm *.mex *.o
+Druhy kurz
+http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial
 
 
 
@@ -25,25 +19,3 @@ RMS training error: 4.722841
 RMS testing error: 6.155792
 
 // *******************************************************************************
-
-
-// poznamky k syntaxi ---------------------------------------------------
-function r=kvadrat(x)
-r=x*x;
-endfunction
-
-x=-2:0.1:2
-
-# volani funkce kvadrat pro kazdy element z vektoru x
-plot (x, arrayfun(@(a) kvadrat(a),x))
-plot (x,arrayfun(@(a) kvadrat(a),x), x, sqrt(x))   # vykresleni dvou funkci najednou
-
-
-help plot
-
-# vyhazeni imaginarnich vysledku z pole
-w(w == real(w))
-
-vsechny indexy do poli jsou od 1!
-
-
