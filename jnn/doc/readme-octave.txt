@@ -1,6 +1,23 @@
 
+Octave 4.0 na Ubuntu:
 
+https://scivision.co/compiling-octave-4-0-on-ubuntu-14-04/
 
+Ubuntu:
+sudo apt-get install gawk gfortran gperf flex libbison-dev libqhull-dev libglpk-dev libcurl4-gnutls-dev libfltk1.3-dev librsvg2-dev libqrupdate-dev libgl2ps-dev libosmesa6-dev libarpack2-dev libqscintilla2-dev libreadline-dev libncurses5-dev libhdf5-dev llvm-dev libqt4-dev default-jdk libfftw3-dev libgraphicsmagick++-dev libjasper-dev libfreeimage-dev transfig epstool
+sudo apt-get install gnuplot 
+
+wget https://ftp.gnu.org/gnu/octave/octave-4.0.0.tar.xz
+tar xf octave-4*.xz
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+cd octave-4*
+./configure --enable-jit --prefix=/opt/octave4.0
+
+make
+sudo make install
+
+// **********************************************************************************************************************
 // poznamky k syntaxi ---------------------------------------------------
 function r=kvadrat(x)
 r=x*x;
