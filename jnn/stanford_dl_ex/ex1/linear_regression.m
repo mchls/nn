@@ -22,21 +22,33 @@ function [f,g] = linear_regression(theta, X,y)
   %        computed gradient in 'g'.
   
 %%% YOUR CODE HERE %%%
+
+% MICHAL START --------------------
 %fprintf ("Vstupni parametr theta je sloupecek vah o velikosti %d: \n",size(theta,1));
 %theta
 %printf ("Vstupni parametr X je matice majici n=%d sloupecku=parametru a m=%d radku=zaznamu: \n",size(X,1),size(X,2));
 %X
 %printf ("Vstupni parametr y je radek o velikosti %d: \n",size(y,2));
 %y
-for rec = 1:m
-    inputX = X(:,rec);
-    outputCorrectY = y(rec);
+%
+% i              - poradi vzorku
+% inputX         - vstupy pro vzorek i
+% outputCorrectY - spravna vystupni hodnota pro vzorek i
+% outputH        - predikce pro vstup pro vzorek i
+% err            - chyba pro vzorek i
+% f              - sumarni chyba pres vsechny vzorky = objective function
+% diff           - gradient pro vzorek i
+% g              - sumarni gradient pres vsechny vzorky
+for i = 1:m
+    inputX = X(:,i);
+    outputCorrectY = y(i);
     outputH = sum(theta .* inputX);
     err = 0.5 * ((outputH-outputCorrectY)^2);
     f += err;
     diff = inputX * (outputH-outputCorrectY);
     g += diff;
 end     
-
+endfunction
+% MICHAL END --------------------
           
           

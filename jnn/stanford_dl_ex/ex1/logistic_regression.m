@@ -22,3 +22,29 @@ function [f,g] = logistic_regression(theta, X,y)
   %        up the gradients (df/dtheta) for each example. Store the result in 'g'.
   %
 %%% YOUR CODE HERE %%%
+% MICHAL START ---------------------------------------------
+%
+% i              - poradi vzorku
+% inputX         - vstupy pro vzorek i
+% outputCorrectY - spravna vystupni hodnota pro vzorek i
+% outputH        - predikce pro vstup pro vzorek i
+% err            - chyba pro vzorek i
+% f              - sumarni chyba pres vsechny vzorky = objective function
+% diff           - gradient pro vzorek i
+% g              - sumarni gradient pres vsechny vzorky
+for i = 1:m
+    inputX = X(:,i);
+    outputCorrectY = y(i);
+    % sum(theta .* inputX); // LINEAR
+    outputH = 1 / (1+ exp(-sum(theta .* inputX)));
+   
+    %err = ((outputH-outputCorrectY)^2); // LINEAR
+    err = outputCorrectY * log(outputH) + (1 - outputCorrectY) * log(1 - outputH);
+    f += -err;
+
+    % stejna funkce jako pro LINEAR - ale ooutputH se pocita pre logistic funkci
+    diff = inputX * (outputH-outputCorrectY);
+    g += diff;
+end     
+endfunction
+% MICHAL END ---------------------------------------------

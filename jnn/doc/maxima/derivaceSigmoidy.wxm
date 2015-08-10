@@ -1,0 +1,21 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+sigm(x,t):=1/(1+exp(-t*x));
+define(sigmd(x,t),diff(sigm(x,t),t));        /* strojove derivovano */
+define(sigmd2(x,t),x*sigm(x,t)*(1-sigm(x,t))); /* rucne derivovano - substituce */
+define(dff(x,t),sigmd(x,t)-sigmd2(x,t));
+ratsimp(dff(x,t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+si(z):=1/(1+exp(-z)); /* znovu a bez theta (t) */
+define(sid(z),diff(si(z),z));
+define(sid2(z),si(z)*(1-si(z)));
+define(df(z),sid(z)-sid2(z));
+ratsimp(df(z));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

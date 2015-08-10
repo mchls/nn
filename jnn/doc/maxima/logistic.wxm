@@ -1,0 +1,19 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+sigm(x,t):=1/(1+exp(-t*x));
+j(t,x,y):=-y*log(sigm(x,t))-(1-y)*log(1-sigm(x,t));
+dj(t,x,y):=diff(j(t,x,y),t);
+dj(t,x,0);
+dj(t,x,1);
+dj(t,x,y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sigm(x,t):=1/(1+exp(-t*x));
+vysledek(t,x,y):=x*(sigm(x,t)-y);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

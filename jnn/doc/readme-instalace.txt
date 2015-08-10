@@ -1,5 +1,6 @@
 
 Doinstalovat: octave vcetne podpory grafu, gnuplot a g++
+Doinstalovat: maxima, wxmaxima  // Computer Algebra Program
 
 Pro octave je treba prelozit c programy:
 cd  ~/pgms/michals/nn/jnn/stanford_dl_ex/common/minFunc_2012/minFunc/mex
