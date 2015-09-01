@@ -49,17 +49,3 @@ X' znamena otoceni vektoru
 x .* x znamena nenasobit vektorove, ale element po elementu
 
 
-// *********************************************************************************************************************
-// MAXIMA 
-spustit: wxmamxima
-zadat prikaz a stisknout shift+enter
-
-k nastaveni hodnot se pouziva ':' - ('a:3')
-k definici funkci se pouziva  ':=' - ('f(x):=x^2;')
-posledni vystup je dostupny pres '%'
-jeste starsi je dostupny pres '%on' kde n je pocet vystupu
-
-log10(x):=log(x)/log(10);
-log10(1000), numer;
-logi(z):=1/(1+exp(-z));
-diff(logi(z),z),expand;
