@@ -11,11 +11,11 @@ import data.MnistData;
 public class Main {
 
     public static void main(String[] args) {
-        //E01_LinearRegression e01=new E01_LinearRegression();
-        //e01.run();
-        MnistData train = new MnistData(true);
-        for (int i = 0; i < 10; i++) {
-            System.out.println(train.data.get(i));
-        }
+        LinReg e01 = new LinReg();
+        e01.run();
+//        MnistData train = new MnistData(true);
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(train.data.get(i));
+//        }
     }
 }
