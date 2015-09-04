@@ -1,6 +1,6 @@
 package ui;
 
-import data.MnistData;
+import dataSets.MnistData;
 
 /**
  * http://ufldl.stanford.edu/tutorial/ Starter code: git clone https://github.com/amaas/stanford_dl_ex Data should go to

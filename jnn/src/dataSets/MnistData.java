@@ -1,4 +1,4 @@
-package data;
+package dataSets;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
