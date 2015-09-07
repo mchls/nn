@@ -1,7 +1,6 @@
 package ui;
 
 import dataSets.HousingData;
-import dataSets.HousingData.HousingRecord;
 import dataSets.abstracts.DataSetRecord;
 import dataSets.abstracts.DataSetSplit;
 import java.util.List;
@@ -104,9 +103,9 @@ public class LinReg {
         Theta theta = Theta.factoryGenerateRandom(hd.getNumberOfParameters());
         DataSetSplit dsp = new DataSetSplit(30.0, hd.getDataSetRandomized());
         //System.out.println("DataSetSplit: "+dsp);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             double errBefore = theta.costFunction(dsp.trainingSet);
-            theta = theta.train(dsp.trainingSet, 0.001);
+            theta = theta.train(dsp.trainingSet, 0.0000001);
             double errAfter = theta.costFunction(dsp.trainingSet);
             System.out.format("ErrBefore: %1.2f ErrAfter: %1.2f ErrDiff: %1.2f\n", errBefore, errAfter, errAfter - errBefore);
         }
